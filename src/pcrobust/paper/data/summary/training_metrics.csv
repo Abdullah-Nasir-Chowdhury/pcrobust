@@ -1,0 +1,41 @@
+Domain,Architecture,epochs_run,epochs_configured,train_time_sec,train_time_min,final_train_loss,final_train_acc,best_train_acc,n_identities,n_scans,n_train_samples,exit_status,start_time_utc,note
+modelnet40,pointnet,,,,,,,,,,,,,"pre-existing checkpoint, predates this session's pipeline logging (no train_logs entry)"
+modelnet40,pointnetpp,,,,,,,,,,,,,"pre-existing checkpoint, predates this session's pipeline logging (no train_logs entry)"
+modelnet40,dgcnn,,,,,,,,,,,,,"pre-existing checkpoint, predates this session's pipeline logging (no train_logs entry)"
+modelnet40,riconv,80,80,4936,82.3,0.0066,1.0,1.0,10,450,9000,0,2026-07-24T02:21:40Z,
+modelnet40,riconvpp,80,80,4322,72.0,0.0069,1.0,1.0,10,200,4000,0,2026-07-22T08:37:04Z,
+modelnet40,risurconv,80,80,5168,86.1,0.0169,0.999,0.999,10,200,4000,0,2026-07-22T08:38:44Z,
+modelnet40,pointmlp,80,80,4875,81.2,0.007,1.0,1.0,10,200,4000,0,2026-07-22T08:40:59Z,
+modelnet40,pointtransformer,80,80,549,9.2,0.0069,1.0,1.0,10,200,4000,0,2026-07-22T11:01:23Z,
+shapenet,pointnet,,,,,,,,,,,,,"pre-existing checkpoint, predates this session's pipeline logging (no train_logs entry)"
+shapenet,pointnetpp,,,,,,,,,,,,,"pre-existing checkpoint, predates this session's pipeline logging (no train_logs entry)"
+shapenet,dgcnn,,,,,,,,,,,,,"pre-existing checkpoint, predates this session's pipeline logging (no train_logs entry)"
+shapenet,riconv,80,80,4922,82.0,0.0071,1.0,1.0,10,450,9000,0,2026-07-24T03:43:56Z,
+shapenet,riconvpp,80,80,4337,72.3,0.0065,1.0,1.0,10,200,4000,0,2026-07-22T09:49:06Z,
+shapenet,risurconv,80,80,5177,86.3,0.015,0.999,0.999,10,200,4000,0,2026-07-22T10:04:52Z,
+shapenet,pointmlp,80,80,4923,82.0,0.0077,1.0,1.0,10,200,4000,0,2026-07-22T10:02:14Z,
+shapenet,pointtransformer,80,80,552,9.2,0.0072,1.0,1.0,10,200,4000,0,2026-07-22T11:31:10Z,
+abo,pointnet,80,80,263,4.4,0.0255,0.997,0.997,10,200,4000,0,2026-07-22T19:05:00Z,
+abo,pointnetpp,80,80,1295,21.6,0.0155,0.997,1.0,10,200,4000,0,2026-07-22T19:09:23Z,
+abo,dgcnn,80,80,1074,17.9,0.0321,0.994,0.995,10,200,4000,0,2026-07-22T19:30:58Z,
+abo,riconv,80,80,2177,36.3,0.0069,1.0,1.0,10,200,4000,0,2026-07-24T02:22:21Z,
+abo,riconvpp,80,80,4322,72.0,0.0068,1.0,1.0,10,200,4000,0,2026-07-22T19:05:48Z,
+abo,risurconv,80,80,5117,85.3,0.0176,0.998,0.999,10,200,4000,0,2026-07-22T20:17:50Z,
+abo,pointmlp,80,80,4828,80.5,0.008,1.0,1.0,10,200,4000,0,2026-07-22T19:06:34Z,
+abo,pointtransformer,80,80,556,9.3,0.0086,0.999,1.0,10,200,4000,0,2026-07-22T20:27:02Z,
+scanobjectnn,pointnet,80,80,264,4.4,0.0641,0.986,0.99,10,200,4000,0,2026-07-22T20:55:32Z,
+scanobjectnn,pointnetpp,80,80,1303,21.7,0.0127,0.998,0.999,10,200,4000,0,2026-07-22T20:59:56Z,
+scanobjectnn,dgcnn,80,80,1076,17.9,0.0569,0.987,0.987,10,200,4000,0,2026-07-22T21:21:39Z,
+scanobjectnn,riconv,80,80,2189,36.5,0.0065,1.0,1.0,10,200,4000,0,2026-07-24T02:22:50Z,
+scanobjectnn,riconvpp,80,80,4303,71.7,0.0069,1.0,1.0,10,200,4000,0,2026-07-22T20:56:17Z,
+scanobjectnn,risurconv,80,80,5158,86.0,0.0484,0.992,0.994,10,200,4000,0,2026-07-22T23:27:48Z,
+scanobjectnn,pointmlp,80,80,4762,79.4,0.0157,0.999,0.999,10,200,4000,0,2026-07-22T22:08:00Z,
+scanobjectnn,pointtransformer,80,80,549,9.2,0.0113,0.999,0.999,10,200,4000,0,2026-07-22T21:39:35Z,
+s3dis,pointnet,80,80,225,3.8,0.1395,0.956,0.962,7,140,2800,0,2026-07-23T02:45:27Z,
+s3dis,pointnetpp,80,80,2038,34.0,0.0718,0.977,0.977,7,140,2800,0,2026-07-23T02:49:12Z,
+s3dis,dgcnn,80,80,914,15.2,0.0895,0.968,0.977,7,140,2800,0,2026-07-23T03:23:10Z,
+s3dis,riconv,80,80,1540,25.7,0.0381,0.986,0.99,7,140,2800,0,2026-07-24T05:05:58Z,
+s3dis,riconvpp,80,80,6174,102.9,0.0303,0.991,0.992,7,140,2800,0,2026-07-23T03:28:06Z,
+s3dis,risurconv,80,80,6959,116.0,0.1084,0.964,0.967,7,140,2800,0,2026-07-23T05:11:00Z,
+s3dis,pointmlp,80,80,4182,69.7,0.0409,0.988,0.99,7,140,2800,0,2026-07-23T02:46:59Z,
+s3dis,pointtransformer,80,80,776,12.9,0.0492,0.983,0.987,7,140,2800,0,2026-07-23T03:56:41Z,

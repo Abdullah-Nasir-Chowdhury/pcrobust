@@ -1,0 +1,11 @@
+row,c1,c2,c3
+PointNet,3.40,0.45,1.9
+PointNet++,1.50,0.86,78.1
+DGCNN,1.83,2.69,2.1
+PointMLP,13.92,15.67,9.2
+PointTransf.,2.22,0.07,9.5
+RIConv,0.74,0.11,90.0
+RIConv++,0.44,0.72,385.2
+RISurConv,10.82,1.27,397.1
+VN-PointNet,1.72,1.86,2.8
+VN-DGCNN,2.92,3.46,11.0

@@ -1,0 +1,26 @@
+domain,pert,n,mean_D,ci_lo,ci_hi,t,p_one_sided,decision
+modelnet40,noise,740,0.1543,0.1432,0.1654,27.26,4.29e-114,REJECT H0
+modelnet40,occlusion,740,0.2808,0.255,0.3065,21.42,7.03e-80,REJECT H0
+modelnet40,yaw,740,-0.0,-0.0,0.0,-0.74,0.77,FAIL TO REJECT H0
+modelnet40,tilt,740,-0.0,-0.0,0.0,-0.65,0.742,FAIL TO REJECT H0
+modelnet40,roll,740,-0.0,-0.0,0.0,-0.37,0.644,FAIL TO REJECT H0
+shapenet,noise,690,0.3134,0.2883,0.3384,24.53,2.55e-96,REJECT H0
+shapenet,occlusion,690,0.1569,0.127,0.1867,10.32,1.25e-23,REJECT H0
+shapenet,yaw,690,-0.0,-0.0,0.0,-1.36,0.913,FAIL TO REJECT H0
+shapenet,tilt,690,0.0,-0.0,0.0,1.21,0.114,FAIL TO REJECT H0
+shapenet,roll,690,0.0,-0.0,0.0,0.15,0.438,FAIL TO REJECT H0
+scanobjectnn,noise,310,0.5364,0.4956,0.5773,25.85,1.53e-79,REJECT H0
+scanobjectnn,occlusion,310,0.5771,0.5282,0.6261,23.18,6.84e-70,REJECT H0
+scanobjectnn,yaw,310,-0.0,-0.0,0.0,-1.07,0.857,FAIL TO REJECT H0
+scanobjectnn,tilt,310,-0.0,-0.0,0.0,-1.67,0.952,FAIL TO REJECT H0
+scanobjectnn,roll,310,-0.0,-0.0,0.0,-0.95,0.83,FAIL TO REJECT H0
+abo,noise,310,0.3245,0.294,0.355,20.94,1.53e-61,REJECT H0
+abo,occlusion,310,0.427,0.3754,0.4786,16.28,9.54e-44,REJECT H0
+abo,yaw,310,-0.0,-0.0,0.0,-0.0,0.5,FAIL TO REJECT H0
+abo,tilt,310,-0.0,-0.0,0.0,-1.0,0.841,FAIL TO REJECT H0
+abo,roll,310,0.0,-0.0,0.0,0.87,0.192,FAIL TO REJECT H0
+s3dis,noise,217,0.6261,0.5723,0.6799,22.94,4.08e-60,REJECT H0
+s3dis,occlusion,217,0.2043,0.1526,0.256,7.79,1.41e-13,REJECT H0
+s3dis,yaw,217,0.0,-0.0,0.0,1.2,0.116,FAIL TO REJECT H0
+s3dis,tilt,217,-0.0,-0.0,0.0,-0.77,0.779,FAIL TO REJECT H0
+s3dis,roll,217,-0.0,-0.0,0.0,-1.64,0.949,FAIL TO REJECT H0

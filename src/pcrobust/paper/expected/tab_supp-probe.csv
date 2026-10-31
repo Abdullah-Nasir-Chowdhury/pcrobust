@@ -1,0 +1,51 @@
+row,c1,c2,c3,c4
+PointNet|trained,0.890,0.717,0.467,0.610
+PointNet|subspace,0.920,0.773,0.477,0.590
+PointNet|kNN,0.927,0.763,0.490,0.593
+PointNet|NCM,0.903,0.730,0.480,0.610
+PointNet|NCM (Eucl.),0.903,0.723,0.397,0.477
+PointNet (inv.)|trained,0.917,0.840,0.663,0.707
+PointNet (inv.)|subspace,0.927,0.827,0.640,0.697
+PointNet (inv.)|kNN,0.913,0.833,0.663,0.713
+PointNet (inv.)|NCM,0.917,0.840,0.670,0.720
+PointNet (inv.)|NCM (Eucl.),0.800,0.693,0.407,0.510
+PointNet++|trained,0.883,0.497,0.290,0.770
+PointNet++|subspace,0.943,0.567,0.263,0.817
+PointNet++|kNN,0.920,0.517,0.323,0.813
+PointNet++|NCM,0.897,0.507,0.317,0.780
+PointNet++|NCM (Eucl.),0.890,0.463,0.390,0.767
+PointNet++ (inv.)|trained,0.913,0.720,0.473,0.803
+PointNet++ (inv.)|subspace,0.950,0.583,0.513,0.870
+PointNet++ (inv.)|kNN,0.930,0.663,0.480,0.830
+PointNet++ (inv.)|NCM,0.937,0.717,0.483,0.830
+PointNet++ (inv.)|NCM (Eucl.),0.900,0.577,0.407,0.780
+DGCNN|trained,0.937,0.847,0.420,0.653
+DGCNN|subspace,0.973,0.890,0.463,0.707
+DGCNN|kNN,0.957,0.843,0.477,0.663
+DGCNN|NCM,0.943,0.853,0.460,0.667
+DGCNN|NCM (Eucl.),0.943,0.803,0.443,0.657
+DGCNN (inv.)|trained,0.937,0.813,0.667,0.697
+DGCNN (inv.)|subspace,0.943,0.870,0.627,0.713
+DGCNN (inv.)|kNN,0.957,0.870,0.657,0.707
+DGCNN (inv.)|NCM,0.940,0.837,0.687,0.717
+DGCNN (inv.)|NCM (Eucl.),0.927,0.840,0.543,0.647
+PointMLP|trained,0.927,0.580,0.393,0.867
+PointMLP|subspace,0.920,0.720,0.353,0.870
+PointMLP|kNN,0.917,0.610,0.397,0.857
+PointMLP|NCM,0.927,0.583,0.397,0.853
+PointMLP|NCM (Eucl.),0.930,0.537,0.337,0.860
+PointMLP (inv.)|trained,0.927,0.850,0.743,0.903
+PointMLP (inv.)|subspace,0.933,0.880,0.680,0.917
+PointMLP (inv.)|kNN,0.927,0.853,0.733,0.900
+PointMLP (inv.)|NCM,0.927,0.860,0.753,0.903
+PointMLP (inv.)|NCM (Eucl.),0.840,0.657,0.483,0.783
+PointTransf.|trained,0.920,0.730,0.413,0.793
+PointTransf.|subspace,0.917,0.740,0.433,0.770
+PointTransf.|kNN,0.917,0.740,0.413,0.790
+PointTransf.|NCM,0.920,0.733,0.407,0.803
+PointTransf.|NCM (Eucl.),0.907,0.687,0.293,0.777
+PointTransf. (inv.)|trained,0.933,0.850,0.657,0.833
+PointTransf. (inv.)|subspace,0.940,0.870,0.640,0.817
+PointTransf. (inv.)|kNN,0.937,0.870,0.637,0.817
+PointTransf. (inv.)|NCM,0.933,0.853,0.653,0.833
+PointTransf. (inv.)|NCM (Eucl.),0.903,0.833,0.400,0.757

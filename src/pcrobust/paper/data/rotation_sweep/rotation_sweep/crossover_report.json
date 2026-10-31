@@ -1,0 +1,42 @@
+{
+  "yaw": {
+    "crossover_deg": 190,
+    "worst_angle_for_focus": 190,
+    "focus_acc_at_worst": 0.833333,
+    "ri_best_acc_at_worst": 0.966667,
+    "max_gap_deg": 190,
+    "max_gap": 0.1333,
+    "focus_acc_at_0": 0.933333,
+    "ri_best_acc_at_0": 0.966667
+  },
+  "tilt": {
+    "crossover_deg": 90,
+    "worst_angle_for_focus": 140,
+    "focus_acc_at_worst": 0.7,
+    "ri_best_acc_at_worst": 0.966667,
+    "max_gap_deg": 140,
+    "max_gap": 0.2667,
+    "focus_acc_at_0": 0.933333,
+    "ri_best_acc_at_0": 0.966667
+  },
+  "roll": {
+    "crossover_deg": 70,
+    "worst_angle_for_focus": 80,
+    "focus_acc_at_worst": 0.833333,
+    "ri_best_acc_at_worst": 0.9,
+    "max_gap_deg": 100,
+    "max_gap": 0.1,
+    "focus_acc_at_0": 0.933333,
+    "ri_best_acc_at_0": 0.966667
+  },
+  "so3": {
+    "crossover_deg": 120,
+    "worst_angle_for_focus": 140,
+    "focus_acc_at_worst": 0.8,
+    "ri_best_acc_at_worst": 0.966667,
+    "max_gap_deg": 140,
+    "max_gap": 0.1667,
+    "focus_acc_at_0": 0.933333,
+    "ri_best_acc_at_0": 0.966667
+  }
+}

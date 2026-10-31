@@ -1,0 +1,4 @@
+perturbation,mean_D,n
+pose,0.004589,300
+noise,0.05218,300
+occlusion,0.044203,300

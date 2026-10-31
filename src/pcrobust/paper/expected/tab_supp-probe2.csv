@@ -1,0 +1,51 @@
+row,c1,c2,c3,c4
+RIConv|trained,0.903,0.437,0.297,0.903
+RIConv|subspace,0.883,0.480,0.280,0.870
+RIConv|kNN,0.913,0.413,0.310,0.913
+RIConv|NCM,0.910,0.420,0.303,0.907
+RIConv|NCM (Eucl.),0.867,0.280,0.247,0.873
+RIConv (inv.)|trained,0.910,0.823,0.530,0.913
+RIConv (inv.)|subspace,0.917,0.823,0.430,0.917
+RIConv (inv.)|kNN,0.930,0.820,0.503,0.927
+RIConv (inv.)|NCM,0.917,0.833,0.533,0.913
+RIConv (inv.)|NCM (Eucl.),0.800,0.497,0.310,0.800
+RIConv++|trained,0.920,0.303,0.313,0.923
+RIConv++|subspace,0.933,0.380,0.427,0.913
+RIConv++|kNN,0.937,0.323,0.343,0.923
+RIConv++|NCM,0.923,0.320,0.327,0.927
+RIConv++|NCM (Eucl.),0.903,0.307,0.247,0.917
+RIConv++ (inv.)|trained,0.933,0.830,0.777,0.943
+RIConv++ (inv.)|subspace,0.940,0.830,0.747,0.940
+RIConv++ (inv.)|kNN,0.943,0.847,0.747,0.940
+RIConv++ (inv.)|NCM,0.937,0.847,0.777,0.943
+RIConv++ (inv.)|NCM (Eucl.),0.890,0.660,0.517,0.897
+RISurConv|trained,0.873,0.367,0.427,0.863
+RISurConv|subspace,0.847,0.337,0.390,0.840
+RISurConv|kNN,0.850,0.380,0.413,0.843
+RISurConv|NCM,0.873,0.367,0.410,0.863
+RISurConv|NCM (Eucl.),0.873,0.373,0.420,0.863
+RISurConv (inv.)|trained,0.757,0.433,0.363,0.733
+RISurConv (inv.)|subspace,0.643,0.340,0.300,0.633
+RISurConv (inv.)|kNN,0.763,0.383,0.387,0.740
+RISurConv (inv.)|NCM,0.763,0.420,0.367,0.743
+RISurConv (inv.)|NCM (Eucl.),0.760,0.403,0.353,0.737
+VN-PointNet|trained,0.847,0.520,0.373,0.847
+VN-PointNet|subspace,0.873,0.610,0.317,0.873
+VN-PointNet|kNN,0.870,0.563,0.367,0.870
+VN-PointNet|NCM,0.853,0.517,0.387,0.853
+VN-PointNet|NCM (Eucl.),0.850,0.397,0.403,0.850
+VN-PointNet (inv.)|trained,0.873,0.737,0.563,0.873
+VN-PointNet (inv.)|subspace,0.870,0.730,0.440,0.870
+VN-PointNet (inv.)|kNN,0.873,0.760,0.557,0.873
+VN-PointNet (inv.)|NCM,0.873,0.773,0.597,0.873
+VN-PointNet (inv.)|NCM (Eucl.),0.850,0.523,0.527,0.850
+VN-DGCNN|trained,0.857,0.697,0.310,0.857
+VN-DGCNN|subspace,0.883,0.750,0.320,0.883
+VN-DGCNN|kNN,0.877,0.727,0.327,0.877
+VN-DGCNN|NCM,0.863,0.700,0.330,0.863
+VN-DGCNN|NCM (Eucl.),0.863,0.700,0.313,0.863
+VN-DGCNN (inv.)|trained,0.843,0.717,0.607,0.843
+VN-DGCNN (inv.)|subspace,0.837,0.703,0.513,0.827
+VN-DGCNN (inv.)|kNN,0.853,0.730,0.583,0.853
+VN-DGCNN (inv.)|NCM,0.857,0.763,0.610,0.857
+VN-DGCNN (inv.)|NCM (Eucl.),0.860,0.757,0.410,0.860

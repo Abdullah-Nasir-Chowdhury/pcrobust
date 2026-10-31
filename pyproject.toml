@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pcrobust"
+version = "0.1.0.dev0"
+description = "Statistical robustness benchmark for point cloud classification: corruption generators, model zoo, evaluation protocol, and the statistical pipeline behind the WACV 2027 paper."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10,<3.14"
+authors = [
+    { name = "Abdulla Nasir Chowdhury" },
+    { name = "Gulpi Qorik Oktagalu Pratamasunu" },
+    { name = "Kazuhiro Fukui" },
+]
+keywords = ["point-cloud", "robustness", "benchmark", "3d", "classification"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "torch",
+    "open3d",
+    "h5py",
+    "einops",
+]
+
+[project.optional-dependencies]
+figures = ["matplotlib"]
+download = ["gdown"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+pcrobust = "pcrobust.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pcrobust"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [".venv", "**/__pycache__"]

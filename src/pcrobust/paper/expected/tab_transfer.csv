@@ -1,0 +1,16 @@
+row,c1,c2
+lidar,+0.134,0.364
+occlusion,+0.105,0.434
+gaussian,+0.013,0.883
+cutout,+0.002,0.881
+rotation,-0.013,0.820
+background,-0.014,0.299
+impulse,+0.058,0.696
+upsampling,+0.023,0.753
+uniform,+0.012,0.766
+density,-0.001,0.866
+density_inc,-0.003,0.890
+distortion_rbf,-0.007,0.790
+distortion_rbf_inv,-0.007,0.789
+shear,-0.011,0.794
+distortion,-0.011,0.788

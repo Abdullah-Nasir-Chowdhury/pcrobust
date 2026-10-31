@@ -1,0 +1,11 @@
+arch,params_M,flops_G,note
+pointnet,3.401,0.451,6 uncounted op types
+pointnetpp,1.5,0.857,13 uncounted op types
+dgcnn,1.833,2.686,13 uncounted op types
+riconv,0.735,0.109,18 uncounted op types
+riconvpp,0.436,0.721,28 uncounted op types
+risurconv,10.823,1.274,30 uncounted op types
+pointmlp,13.923,15.671,16 uncounted op types
+pointtransformer,2.217,0.07,21 uncounted op types
+vn_pointnet,1.717,1.86,14 uncounted op types
+vn_dgcnn,2.923,3.456,14 uncounted op types

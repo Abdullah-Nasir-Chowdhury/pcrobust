@@ -1,0 +1,17 @@
+condition,level,n,accuracy
+clean,,300,0.82
+noise,0.005,300,0.81
+noise,0.01,300,0.823333
+noise,0.02,300,0.85
+noise,0.03,300,0.79
+noise,0.05,300,0.53
+occlusion,0.3,300,0.606667
+occlusion,0.6,300,0.55
+occlusion,1.2,300,0.54
+occlusion,2.5,300,0.49
+occlusion,6.0,300,0.383333
+pose,120,300,0.686667
+pose,20,300,0.823333
+pose,40,300,0.83
+pose,60,300,0.813333
+pose,80,300,0.763333

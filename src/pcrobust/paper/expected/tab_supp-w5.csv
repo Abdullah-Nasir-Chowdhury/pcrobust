@@ -1,0 +1,5 @@
+row,c1,c2
+PointNet++|no,0.717,0.588
+PointNet++|yes,0.672,0.611
+RIConv++|no,0.819,0.700
+RIConv++|yes,0.843,0.751
