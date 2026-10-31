@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use pcrobust, please cite the paper."
+title: "pcrobust: statistical robustness benchmark for point cloud classification"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Abdullah-Nasir-Chowdhury/pcrobust"
+authors:
+  - family-names: Chowdhury
+    given-names: Abdulla Nasir
+  - family-names: Pratamasunu
+    given-names: Gulpi Qorik Oktagalu
+  - family-names: Fukui
+    given-names: Kazuhiro
+preferred-citation:
+  type: conference-paper
+  title: "Do We Still Need Rotation-Invariant Architectures? A Statistical Robustness Benchmark for Point Cloud Classification"
+  authors:
+    - family-names: Chowdhury
+      given-names: Abdulla Nasir
+    - family-names: Pratamasunu
+      given-names: Gulpi Qorik Oktagalu
+    - family-names: Fukui
+      given-names: Kazuhiro
+  collection-title: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+  year: 2027

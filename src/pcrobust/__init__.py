@@ -18,7 +18,7 @@ corruption function is first used.
 
 from pcrobust.registry import FAMILIES, ModelInfo, family_of, list_models, model_info
 
-__version__ = "0.1.0.dev0"
+__version__ = "1.0.0"
 
 _LAZY = {
     "load_model": ("pcrobust.models.zoo", "load_model"),

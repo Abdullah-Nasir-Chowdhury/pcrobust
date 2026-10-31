@@ -8,8 +8,11 @@ checkpoint on first use into the local cache
 ``~/.cache/pcrobust``), verifies its SHA256, and returns the cached path on
 every subsequent call.
 
-The manifest ships with ``base_url: null`` and an empty ``files`` dict; it
-is populated at release time once the assets are uploaded.
+``base_url`` points at the release's download directory. Release asset
+names cannot contain ``/``, so when the manifest sets ``asset_sep`` the
+``/`` in a checkpoint name is replaced by it to form the asset name
+(``modelnet40/dgcnn.pth`` -> ``modelnet40__dgcnn.pth``); the local cache
+keeps the ``<domain>/<key>.pth`` layout either way.
 """
 
 from __future__ import annotations
@@ -57,8 +60,8 @@ def list_checkpoints(revision: str = DEFAULT_REVISION) -> list[str]:
 def checkpoint_path(name: str, revision: str = DEFAULT_REVISION) -> Path:
     """Return the local path of checkpoint ``name``, downloading if needed.
 
-    Looks ``name`` up in ``zoo_manifest.json``, downloads
-    ``<base_url>/<name>`` into ``$PCROBUST_HOME/checkpoints/<revision>/``,
+    Looks ``name`` up in ``zoo_manifest.json``, downloads its release asset
+    from ``base_url`` into ``$PCROBUST_HOME/checkpoints/<revision>/``,
     verifies its SHA256 against the manifest (raising ``RuntimeError`` on
     mismatch), and caches the verified file. A cached file whose hash still
     matches is returned without touching the network.
@@ -87,7 +90,9 @@ def checkpoint_path(name: str, revision: str = DEFAULT_REVISION) -> Path:
             "zoo_manifest.json has no base_url yet -- it is populated at "
             "release time once the checkpoint assets are uploaded")
 
-    url = base_url.rstrip("/") + "/" + name
+    sep = manifest.get("asset_sep")
+    asset = name.replace("/", sep) if sep else name
+    url = base_url.rstrip("/") + "/" + asset
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(dest.name + ".part")
     try:

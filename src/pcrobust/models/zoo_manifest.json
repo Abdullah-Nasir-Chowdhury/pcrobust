@@ -1,7 +1,8 @@
 {
-  "_note": "Checkpoints for the wacv2027 revision, named <domain>/<key>.pth. Keys: <arch> (baseline), <arch>_invreg[_warmup|_pose270|_pose270yaw], _rep1/_rep2/_rep3 for the seed-variance replicates (ModelNet40), _so3aug (augmentation-only control), _modelnet40b (second 10-class subset). base_url is set once the files are hosted.",
+  "_note": "Checkpoints for the wacv2027 revision, named <domain>/<key>.pth. Keys: <arch> (baseline), <arch>_invreg[_warmup|_pose270|_pose270yaw], _rep1/_rep2/_rep3 for the seed-variance replicates (ModelNet40), _so3aug (augmentation-only control), _modelnet40b (second 10-class subset). Files are GitHub Release assets of the v1.0.0 tag, named with '/' replaced by asset_sep.",
   "revision": "wacv2027",
-  "base_url": null,
+  "base_url": "https://github.com/Abdullah-Nasir-Chowdhury/pcrobust/releases/download/v1.0.0",
+  "asset_sep": "__",
   "files": {
     "abo/dgcnn.pth": {
       "sha256": "be5d4b119e6c0511425e8648290a3c6727022b60cc8add5bf3e23ff826b5982c",
@@ -383,6 +384,10 @@
       "sha256": "dca01dc2bf0a7297a4c6e81c59e6dfd3c4b40747266918f731fa80619c3a0934",
       "bytes": 2974105
     },
+    "modelnet40/riconv_so3aug.pth": {
+      "sha256": "e26713fdaf349d542809ded4f6025ed8a59705ae12c5d03061483cc46caaf25a",
+      "bytes": 2974105
+    },
     "modelnet40/riconvpp.pth": {
       "sha256": "1f86d08749e95e74c9b3e8d4999ad076aaae74ccef0d75e2014ec7173319a235",
       "bytes": 1797386
@@ -431,6 +436,10 @@
       "sha256": "21246e56b3b14eda7c7e8365241b4083d5b62674d59a2ecd6d5dd131c5fcd914",
       "bytes": 1797386
     },
+    "modelnet40/riconvpp_so3aug.pth": {
+      "sha256": "f71758c8effc75d9066766788d20dc944c42b166154a599827a5afea13bc28a4",
+      "bytes": 1797386
+    },
     "modelnet40/risurconv.pth": {
       "sha256": "d71bce39886dffdba48c21ddccc272e905b185fccb633dad2559486b3779c394",
       "bytes": 43399371
@@ -471,6 +480,10 @@
       "sha256": "f75081cfe8e5c0bb00c7f8a62632679ebe3e9e75024324e5d9577cbe030db335",
       "bytes": 43399371
     },
+    "modelnet40/risurconv_so3aug.pth": {
+      "sha256": "48d7212294a11b157e66a7dd7997d0791f16b9c0e2805a9dfc8089c05fe8ca2e",
+      "bytes": 43399371
+    },
     "modelnet40/vn_dgcnn.pth": {
       "sha256": "222711dc351d9d0756d857498ff92e42538d6de83b122f7bfe642063bceb237f",
       "bytes": 11726947
@@ -501,6 +514,10 @@
     },
     "modelnet40/vn_dgcnn_rep3.pth": {
       "sha256": "f8550df414f4929753eb1d593e1ec255a1477f14a220c95453ab934291b0e1ea",
+      "bytes": 11726947
+    },
+    "modelnet40/vn_dgcnn_so3aug.pth": {
+      "sha256": "7332c66ea4a41051b58b656a34eb8c44cf4de06c3f2268195e6ccf9c0ec2f672",
       "bytes": 11726947
     },
     "modelnet40/vn_pointnet.pth": {
@@ -538,6 +555,10 @@
     },
     "modelnet40/vn_pointnet_rep3.pth": {
       "sha256": "844da569f7e9db26337e38e1399a20dd671fdc0960c18b41c920da546be3d505",
+      "bytes": 6893872
+    },
+    "modelnet40/vn_pointnet_so3aug.pth": {
+      "sha256": "a51058346845a1704fbddab2f8d704509ea85fc2e3d3214df8ab3ffd8751d3b5",
       "bytes": 6893872
     },
     "s3dis/dgcnn.pth": {

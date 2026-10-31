@@ -193,7 +193,7 @@ def test_zoo_manifest_entries_are_well_formed():
     from pcrobust.models.zoo import _load_manifest, list_checkpoints
 
     files = _load_manifest()["files"]
-    assert len(files) == len(list_checkpoints()) == 188
+    assert len(files) == len(list_checkpoints()) == 193
     for name, entry in files.items():
         domain, fname = name.split("/")
         assert domain in DOMAINS and fname.endswith(".pth"), name
@@ -218,3 +218,31 @@ def test_zoo_uses_cached_file_when_hash_matches(tmp_path, monkeypatch):
     cached.parent.mkdir(parents=True)
     cached.write_bytes(data)
     assert zoo.checkpoint_path("modelnet40/pointnet.pth") == cached
+
+
+def test_zoo_downloads_flat_asset_name(tmp_path, monkeypatch):
+    import hashlib
+    import json
+
+    from pcrobust.models import zoo
+
+    data = b"not really a checkpoint"
+    manifest = {"revision": "wacv2027", "base_url": "https://example.org/dl", "asset_sep": "__",
+                "files": {"modelnet40/pointnet.pth": {
+                    "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)}}}
+    mpath = tmp_path / "manifest.json"
+    mpath.write_text(json.dumps(manifest))
+    monkeypatch.setattr(zoo, "_MANIFEST_PATH", mpath)
+    monkeypatch.setenv("PCROBUST_HOME", str(tmp_path / "home"))
+    urls = []
+
+    def fake_urlretrieve(url, dest):
+        urls.append(url)
+        with open(dest, "wb") as f:
+            f.write(data)
+
+    monkeypatch.setattr(zoo.urllib.request, "urlretrieve", fake_urlretrieve)
+    path = zoo.checkpoint_path("modelnet40/pointnet.pth")
+    assert urls == ["https://example.org/dl/modelnet40__pointnet.pth"]
+    assert path == tmp_path / "home" / "checkpoints" / "wacv2027" / "modelnet40" / "pointnet.pth"
+    assert path.read_bytes() == data

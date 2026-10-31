@@ -24,10 +24,16 @@ It packages the paper's benchmark as reusable parts:
   (27 tables, 4 figures) rebuilt from the frozen data in seconds, and
   checked number by number against what the paper prints.
 
-**Status: v0.1.0.dev0.** Checkpoints are not hosted yet; the zoo manifest
-(`src/pcrobust/models/zoo_manifest.json`) is populated at release.
+- **Model zoo**: all 193 trained checkpoints behind the paper, hosted as
+  assets of the v1.0.0 GitHub release and downloaded on first use.
 
 ## Install
+
+```bash
+pip install pcrobust
+```
+
+From a clone, for development:
 
 ```bash
 pip install -e ".[figures,dev]"
@@ -117,6 +123,15 @@ A checkpoint key is an architecture plus an optional recipe suffix:
 `pointnet`, `pointnet_invreg`, `pointnet_invreg_warmup`,
 `pointnet_invreg_pose270`. Every evaluator accepts a directory override
 (`--models_dir` / `--ckpt_root`) for checkpoints kept elsewhere.
+
+Released checkpoints download on first use and are verified against the
+SHA256 in `src/pcrobust/models/zoo_manifest.json`:
+
+```python
+model, classes = pcrobust.load_model("modelnet40/riconvpp_invreg_rep1.pth")
+```
+
+`pcrobust.models.zoo.list_checkpoints()` lists all 193 names.
 
 ModelNet40 downloads automatically (`pcrobust prepare modelnet40 --download`).
 ABO fetches its meshes during `pcrobust prepare abo` once `listings.json.gz`
