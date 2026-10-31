@@ -246,3 +246,23 @@ def test_zoo_downloads_flat_asset_name(tmp_path, monkeypatch):
     assert urls == ["https://example.org/dl/modelnet40__pointnet.pth"]
     assert path == tmp_path / "home" / "checkpoints" / "wacv2027" / "modelnet40" / "pointnet.pth"
     assert path.read_bytes() == data
+
+
+# ── welcome message ───────────────────────────────────────────────────────────
+
+def test_welcome_message_is_shown_once(capsys):
+    from pcrobust._welcome import show_once
+
+    show_once("9.9.9")
+    first = capsys.readouterr()
+    assert "pcrobust 9.9.9" in first.err and first.out == ""
+    show_once("9.9.9")
+    assert capsys.readouterr().err == ""
+
+
+def test_welcome_message_respects_quiet(capsys, monkeypatch):
+    from pcrobust._welcome import show_once
+
+    monkeypatch.setenv("PCROBUST_QUIET", "1")
+    show_once("9.9.9")
+    assert capsys.readouterr().err == ""
