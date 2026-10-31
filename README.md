@@ -2,7 +2,9 @@
 
 Companion package to *Do We Still Need Rotation-Invariant Architectures?
 A Statistical Robustness Benchmark for Point Cloud Classification*
-(WACV 2027).
+(WACV 2027). The version evaluated in the paper is release v1.0.0,
+archived on Zenodo:
+[10.5281/zenodo.23847450](https://doi.org/10.5281/zenodo.23847450).
 
 It packages the paper's benchmark as reusable parts:
 
