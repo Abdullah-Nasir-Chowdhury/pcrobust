@@ -250,19 +250,50 @@ def test_zoo_downloads_flat_asset_name(tmp_path, monkeypatch):
 
 # ── welcome message ───────────────────────────────────────────────────────────
 
-def test_welcome_message_is_shown_once(capsys):
+def _stderr_is_terminal(monkeypatch, is_tty=True):
+    # Call from the test body: capsys replaces sys.stderr between setup and call.
+    monkeypatch.delitem(sys.modules, "ipykernel", raising=False)
+    monkeypatch.setattr(sys.stderr, "isatty", lambda: is_tty, raising=False)
+
+
+def test_welcome_message_is_shown_once_per_version(capsys, monkeypatch):
     from pcrobust._welcome import show_once
 
+    _stderr_is_terminal(monkeypatch)
     show_once("9.9.9")
     first = capsys.readouterr()
     assert "pcrobust 9.9.9" in first.err and first.out == ""
     show_once("9.9.9")
     assert capsys.readouterr().err == ""
+    show_once("9.9.10")
+    assert "pcrobust 9.9.10" in capsys.readouterr().err
 
 
 def test_welcome_message_respects_quiet(capsys, monkeypatch):
     from pcrobust._welcome import show_once
 
+    _stderr_is_terminal(monkeypatch)
     monkeypatch.setenv("PCROBUST_QUIET", "1")
     show_once("9.9.9")
     assert capsys.readouterr().err == ""
+
+
+def test_welcome_message_goes_to_stdout_in_a_notebook(capsys, monkeypatch):
+    from pcrobust._welcome import show_once
+
+    monkeypatch.setitem(sys.modules, "ipykernel", object())
+    show_once("9.9.9")
+    shown = capsys.readouterr()
+    assert "pcrobust 9.9.9" in shown.out and shown.err == ""
+
+
+def test_welcome_message_is_kept_when_nobody_can_read_it(capsys, monkeypatch):
+    from pcrobust._welcome import show_once
+
+    # A piped or CI import prints nothing and must not use up the message.
+    _stderr_is_terminal(monkeypatch, is_tty=False)
+    show_once("9.9.9")
+    assert capsys.readouterr().err == ""
+    _stderr_is_terminal(monkeypatch)
+    show_once("9.9.9")
+    assert "pcrobust 9.9.9" in capsys.readouterr().err

@@ -4,6 +4,17 @@ Corrections and extensions land as tagged point releases. Raw CSVs behind
 published tables are never overwritten in place: a corrected table ships
 alongside its superseded version.
 
+## 1.0.2 (2026-11-01)
+
+- The welcome message now shows once per version instead of once ever, so
+  upgrading shows it again.
+- Imports nobody can read (pipes, CI, test collection) no longer use up the
+  message, which could leave it unseen in a later notebook or terminal.
+- In a Jupyter notebook the message goes to stdout, so it does not render
+  like an error.
+- Checkpoints, results, and numbers are unchanged from 1.0.0; the model
+  zoo still downloads the v1.0.0 release assets.
+
 ## 1.0.1 (2026-11-01)
 
 - One-time welcome message on the first `import pcrobust`, printed to
