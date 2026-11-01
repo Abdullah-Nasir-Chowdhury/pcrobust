@@ -4,6 +4,15 @@ Corrections and extensions land as tagged point releases. Raw CSVs behind
 published tables are never overwritten in place: a corrected table ships
 alongside its superseded version.
 
+## 1.0.3 (2026-11-01)
+
+- Typing `pcrobust` with no arguments now shows the welcome message every
+  time, followed by the usage. Other commands and `import pcrobust` keep
+  the once-per-version behavior, and the message is not printed twice on
+  the first run of a new version.
+- Checkpoints, results, and numbers are unchanged from 1.0.0; the model
+  zoo still downloads the v1.0.0 release assets.
+
 ## 1.0.2 (2026-11-01)
 
 - The welcome message now shows once per version instead of once ever, so

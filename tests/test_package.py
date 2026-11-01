@@ -287,6 +287,28 @@ def test_welcome_message_goes_to_stdout_in_a_notebook(capsys, monkeypatch):
     assert "pcrobust 9.9.9" in shown.out and shown.err == ""
 
 
+def test_bare_command_shows_welcome_every_time(capsys, monkeypatch):
+    from pcrobust import __version__, _welcome
+    from pcrobust.cli import main
+
+    monkeypatch.setattr(_welcome, "_shown", False)
+    for _ in range(2):
+        assert main([]) == 0
+        out = capsys.readouterr().out
+        assert f"pcrobust {__version__}" in out and "usage:" in out
+        assert "Shown once per version" not in out
+
+
+def test_bare_command_does_not_repeat_the_import_welcome(capsys, monkeypatch):
+    from pcrobust import _welcome
+    from pcrobust.cli import main
+
+    monkeypatch.setattr(_welcome, "_shown", True)
+    main([])
+    out = capsys.readouterr().out
+    assert "Companion to" not in out and "usage:" in out
+
+
 def test_welcome_message_is_kept_when_nobody_can_read_it(capsys, monkeypatch):
     from pcrobust._welcome import show_once
 

@@ -5,7 +5,8 @@ the last version shown; ``PCROBUST_QUIET=1`` silences it entirely. Nothing is
 printed or recorded when nobody can read it (pipes, CI, test collection), so
 those imports do not use up the message. Uses only the standard library so
 ``import pcrobust`` stays light, and never raises: if the marker cannot be
-written, the message is simply skipped.
+written, the message is simply skipped. The bare ``pcrobust`` command prints
+it every time, without the marker (see ``pcrobust.cli.main``).
 """
 
 from __future__ import annotations
@@ -21,9 +22,18 @@ Companion to "Do We Still Need Rotation-Invariant Architectures?" (WACV 2027)
   Models:  pcrobust.load_model("modelnet40/riconvpp_invreg_rep1.pth")
   Docs:    https://github.com/Abdullah-Nasir-Chowdhury/pcrobust
   Cite:    https://doi.org/10.5281/zenodo.23847450
-
-(Shown once per version. Set PCROBUST_QUIET=1 to silence.)
 """
+
+_ONCE_NOTE = "(Shown once per version. Set PCROBUST_QUIET=1 to silence.)\n"
+
+# Set when this process has already printed the message, so the bare
+# ``pcrobust`` command does not repeat what the import just showed.
+_shown = False
+
+
+def message(version: str) -> str:
+    """The welcome text for ``version``, without the once-per-version note."""
+    return _MESSAGE.format(version=version)
 
 
 def _stream():
@@ -56,4 +66,6 @@ def show_once(version: str) -> None:
             f.write(version + "\n")
     except OSError:
         return
-    print(_MESSAGE.format(version=version), file=stream)
+    global _shown
+    _shown = True
+    print(message(version) + "\n" + _ONCE_NOTE, file=stream)
