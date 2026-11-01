@@ -4,6 +4,18 @@ Corrections and extensions land as tagged point releases. Raw CSVs behind
 published tables are never overwritten in place: a corrected table ships
 alongside its superseded version.
 
+## 1.0.4 (2026-11-01)
+
+- `import pcrobust` shows the welcome message once per installation
+  again, instead of once per version, so upgrading no longer repeats it.
+- The "(Shown once per version ...)" note is gone. The message now ends
+  with the command that silences it: `export PCROBUST_QUIET=1`
+  (Windows: `setx PCROBUST_QUIET 1`).
+- Typing `pcrobust` with no arguments still shows the message every time,
+  unless `PCROBUST_QUIET` is set.
+- Checkpoints, results, and numbers are unchanged from 1.0.0; the model
+  zoo still downloads the v1.0.0 release assets.
+
 ## 1.0.3 (2026-11-01)
 
 - Typing `pcrobust` with no arguments now shows the welcome message every

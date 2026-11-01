@@ -18,7 +18,7 @@ corruption function is first used.
 
 from pcrobust.registry import FAMILIES, ModelInfo, family_of, list_models, model_info
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 from pcrobust._welcome import show_once as _show_welcome
 

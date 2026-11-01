@@ -256,17 +256,19 @@ def _stderr_is_terminal(monkeypatch, is_tty=True):
     monkeypatch.setattr(sys.stderr, "isatty", lambda: is_tty, raising=False)
 
 
-def test_welcome_message_is_shown_once_per_version(capsys, monkeypatch):
+def test_welcome_message_is_shown_once_per_installation(capsys, monkeypatch):
     from pcrobust._welcome import show_once
 
     _stderr_is_terminal(monkeypatch)
     show_once("9.9.9")
     first = capsys.readouterr()
     assert "pcrobust 9.9.9" in first.err and first.out == ""
+    assert "PCROBUST_QUIET=1" in first.err
     show_once("9.9.9")
     assert capsys.readouterr().err == ""
+    # Upgrading does not show it again.
     show_once("9.9.10")
-    assert "pcrobust 9.9.10" in capsys.readouterr().err
+    assert capsys.readouterr().err == ""
 
 
 def test_welcome_message_respects_quiet(capsys, monkeypatch):
@@ -296,7 +298,18 @@ def test_bare_command_shows_welcome_every_time(capsys, monkeypatch):
         assert main([]) == 0
         out = capsys.readouterr().out
         assert f"pcrobust {__version__}" in out and "usage:" in out
-        assert "Shown once per version" not in out
+        assert "PCROBUST_QUIET=1" in out
+
+
+def test_bare_command_respects_quiet(capsys, monkeypatch):
+    from pcrobust import _welcome
+    from pcrobust.cli import main
+
+    monkeypatch.setattr(_welcome, "_shown", False)
+    monkeypatch.setenv("PCROBUST_QUIET", "1")
+    main([])
+    out = capsys.readouterr().out
+    assert "Companion to" not in out and "usage:" in out
 
 
 def test_bare_command_does_not_repeat_the_import_welcome(capsys, monkeypatch):

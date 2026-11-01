@@ -366,10 +366,13 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     if not argv:
-        # Bare ``pcrobust``: always greet, unless the import just did.
+        # Bare ``pcrobust``: always greet, unless the import just did or the
+        # user silenced it.
+        import os
+
         from pcrobust import __version__, _welcome
 
-        if not _welcome._shown:
+        if not _welcome._shown and not os.environ.get("PCROBUST_QUIET"):
             print(_welcome.message(__version__))
     if argv and argv[0] in PASS_THROUGH:
         return _pass_through(argv[0], argv[1:])
