@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pcrobust"
-version = "1.0.4"
+version = "1.0.5"
 description = "Statistical robustness benchmark for point cloud classification: corruption generators, model zoo, evaluation protocol, and the statistical pipeline behind the WACV 2027 paper."
 readme = "README.md"
 license = { text = "MIT" }

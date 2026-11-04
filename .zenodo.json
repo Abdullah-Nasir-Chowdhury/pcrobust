@@ -1,0 +1,20 @@
+{
+  "title": "pcrobust: statistical robustness benchmark for point cloud classification",
+  "upload_type": "software",
+  "creators": [
+    {"name": "Chowdhury, Abdulla Nasir", "affiliation": "University of Tsukuba"},
+    {"name": "Pratamasunu, Gulpi Qorik Oktagalu", "affiliation": "University of Tsukuba"},
+    {"name": "Fukui, Kazuhiro", "affiliation": "University of Tsukuba"}
+  ],
+  "description": "<p>Companion package to the paper <em>Do We Still Need Rotation-Invariant Architectures? A Statistical Robustness Benchmark for Point Cloud Classification</em> (arXiv:2611.03952, accepted to WACV 2027): corruption generators, the 10 benchmark architectures, the evaluation protocol, the statistical pipeline, training recipes, and the frozen data behind every table and figure. The 193 trained checkpoints are assets of the v1.0.0 release.</p><p><strong>If you use pcrobust, please cite the paper:</strong> A. N. Chowdhury, G. Q. O. Pratamasunu, and K. Fukui. Do We Still Need Rotation-Invariant Architectures? A Statistical Robustness Benchmark for Point Cloud Classification. arXiv:2611.03952, 2026. <a href=\"https://arxiv.org/abs/2611.03952\">https://arxiv.org/abs/2611.03952</a></p>",
+  "notes": "Please cite the paper: Chowdhury, Pratamasunu, and Fukui, \"Do We Still Need Rotation-Invariant Architectures? A Statistical Robustness Benchmark for Point Cloud Classification\", arXiv:2611.03952 (2026), accepted to WACV 2027. This DOI identifies the software release.",
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "identifier": "10.48550/arXiv.2611.03952",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    }
+  ]
+}

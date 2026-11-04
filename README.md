@@ -2,8 +2,9 @@
 
 Companion package to *Do We Still Need Rotation-Invariant Architectures?
 A Statistical Robustness Benchmark for Point Cloud Classification*
-(WACV 2027). The version evaluated in the paper is release v1.0.0,
-archived on Zenodo:
+(WACV 2027), [arXiv:2611.03952](https://arxiv.org/abs/2611.03952)
+(DOI [10.48550/arXiv.2611.03952](https://doi.org/10.48550/arXiv.2611.03952)).
+The version evaluated in the paper is release v1.0.0, archived on Zenodo:
 [10.5281/zenodo.23847450](https://doi.org/10.5281/zenodo.23847450).
 
 It packages the paper's benchmark as reusable parts:
@@ -152,6 +153,26 @@ Covers every module importing standalone, a CPU forward pass for all 10
 architectures, checkpoint loading, corruption properties and determinism,
 every frozen data file, and the CLI. The golden tests rebuild
 every paper table and figure and compare each printed number.
+
+## Citation
+
+If you use pcrobust or the benchmark, please cite the paper:
+
+```bibtex
+@article{chowdhury2026rotation,
+  title   = {Do We Still Need Rotation-Invariant Architectures? A Statistical
+             Robustness Benchmark for Point Cloud Classification},
+  author  = {Chowdhury, Abdulla Nasir and Pratamasunu, Gulpi Qorik Oktagalu
+             and Fukui, Kazuhiro},
+  journal = {arXiv preprint arXiv:2611.03952},
+  doi     = {10.48550/arXiv.2611.03952},
+  year    = {2026},
+  note    = {Accepted to WACV 2027}
+}
+```
+
+The Zenodo DOI above identifies the software release; cite the paper for
+the work itself.
 
 ## License
 

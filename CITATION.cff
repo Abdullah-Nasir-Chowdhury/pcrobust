@@ -13,7 +13,7 @@ authors:
   - family-names: Fukui
     given-names: Kazuhiro
 preferred-citation:
-  type: conference-paper
+  type: article
   title: "Do We Still Need Rotation-Invariant Architectures? A Statistical Robustness Benchmark for Point Cloud Classification"
   authors:
     - family-names: Chowdhury
@@ -22,5 +22,8 @@ preferred-citation:
       given-names: Gulpi Qorik Oktagalu
     - family-names: Fukui
       given-names: Kazuhiro
-  collection-title: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
-  year: 2027
+  journal: "arXiv preprint arXiv:2611.03952"
+  doi: "10.48550/arXiv.2611.03952"
+  url: "https://arxiv.org/abs/2611.03952"
+  year: 2026
+  notes: "Accepted to WACV 2027."

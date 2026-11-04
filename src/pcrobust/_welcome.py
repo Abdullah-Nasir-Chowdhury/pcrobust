@@ -21,7 +21,7 @@ Companion to "Do We Still Need Rotation-Invariant Architectures?" (WACV 2027)
   Try:     pcrobust reproduce tab:m40c --compare-paper
   Models:  pcrobust.load_model("modelnet40/riconvpp_invreg_rep1.pth")
   Docs:    https://github.com/Abdullah-Nasir-Chowdhury/pcrobust
-  Cite:    https://doi.org/10.5281/zenodo.23847450
+  Cite:    https://arxiv.org/abs/2611.03952
   Quiet:   export PCROBUST_QUIET=1   (Windows: setx PCROBUST_QUIET 1)
 """
 

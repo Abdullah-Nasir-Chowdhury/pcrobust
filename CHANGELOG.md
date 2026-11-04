@@ -4,6 +4,15 @@ Corrections and extensions land as tagged point releases. Raw CSVs behind
 published tables are never overwritten in place: a corrected table ships
 alongside its superseded version.
 
+## 1.0.5 (2026-11-04)
+
+- Citations now point to the paper on arXiv,
+  [arXiv:2611.03952](https://arxiv.org/abs/2611.03952)
+  (DOI 10.48550/arXiv.2611.03952): the README BibTeX, `CITATION.cff`, the
+  Zenodo record metadata and the `Cite:` line of the welcome message.
+  The Zenodo DOI still identifies the software release.
+- Checkpoints, results, and numbers are unchanged from 1.0.0.
+
 ## 1.0.4 (2026-11-01)
 
 - `import pcrobust` shows the welcome message once per installation
